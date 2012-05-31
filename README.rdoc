@@ -1,0 +1,12 @@
+= AddHttpHeader
+
+This gem provides Rack middleware which adds an http header to the response. You can either add a hard coded header, or provide a block that will get evaluated at runtime.
+
+== Example
+
+  # Add the host and build version to the header to make debugging production issues easier
+  host_info = "#{`hostname`.split('.').first}; #{BUILD_VERSION}"
+  Rails.configuration.middleware.insert_before(0, AddHttpHeader, 'X-Host-Info' => host_info)
+  
+  # Add debug info about the request only on errors
+  Rails.configuration.middleware.insert_before(0, AddHttpHeader, 'X-Debug' => lambda{|env, status, headers| DebugInfo(env) if status >= 500})
