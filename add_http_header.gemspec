@@ -4,18 +4,19 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "tribune-add_http_header"
+  s.name = "add_http_header"
   s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brian Durand"]
-  s.date = "2012-05-31"
+  s.date = "2012-06-05"
   s.description = "Simple Rack middleware for adding custom HTTP headers."
   s.email = ["bdurand@tribune.com"]
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
+    "License.txt",
     "README.rdoc",
     "Rakefile",
     "lib/add_http_header.rb",

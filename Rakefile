@@ -18,12 +18,12 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "tribune-add_http_header"
+    gem.name = "add_http_header"
     gem.summary = %Q{Simple Rack middleware for adding HTTP header}
     gem.description = %Q{Simple Rack middleware for adding custom HTTP headers.}
     gem.authors = ["Brian Durand"]
     gem.email = ["bdurand@tribune.com"]
-    gem.files = FileList["lib/**/*", "spec/**/*", "README.rdoc", "Rakefile", "TRIBUNE_CODE"].to_a
+    gem.files = FileList["lib/**/*", "spec/**/*", "README.rdoc", "Rakefile", "License.txt"].to_a
     gem.has_rdoc = true
     gem.rdoc_options << '--line-numbers' << '--inline-source' << '--main' << 'README.rdoc'
     gem.extra_rdoc_files = ["README.rdoc"]
