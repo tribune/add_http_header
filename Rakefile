@@ -22,7 +22,7 @@ begin
     gem.summary = %Q{Simple Rack middleware for adding HTTP header}
     gem.description = %Q{Simple Rack middleware for adding custom HTTP headers.}
     gem.authors = ["Brian Durand"]
-    gem.email = ["bdurand@tribune.com"]
+    gem.email = ["mdobrota@tribune.com", "ddpr@tribune.com"]
     gem.files = FileList["lib/**/*", "spec/**/*", "README.rdoc", "Rakefile", "License.txt"].to_a
     gem.has_rdoc = true
     gem.rdoc_options << '--line-numbers' << '--inline-source' << '--main' << 'README.rdoc'
@@ -30,5 +30,6 @@ begin
     gem.add_dependency('activesupport')
     gem.add_development_dependency('rspec', '>= 2.0.0')
   end
+  Jeweler::RubygemsDotOrgTasks.new
 rescue LoadError
 end
