@@ -40,5 +40,13 @@ describe AddHttpHeader do
     body.should == "Success"
     headers.should == {"Content-Type" => "text/html"}
   end
+
+  it "doesn't add blank result of a dynamic header" do
+    middleware = AddHttpHeader.new(@app, :test => ->(*){ "" })
+    status, headers, body = middleware.call({})
+    status.should == 200
+    body.should == "Success"
+    headers.should == {"Content-Type" => "text/html"}
+  end
   
 end

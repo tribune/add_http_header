@@ -1,8 +1,9 @@
-Gemfile.lock
 *.swm
 *.swn
 *.swo
 *.swp
 *.gem
-pkg
+/Gemfile.lock
 /gemfiles/*.lock
+/pkg
+/.bundle
