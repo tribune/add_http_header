@@ -5,3 +5,4 @@ Gemfile.lock
 *.swp
 *.gem
 pkg
+/gemfiles/*.lock
